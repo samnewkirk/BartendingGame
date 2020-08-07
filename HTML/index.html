@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+  <style>
+
+    .bottom{
+      text-align: center;
+      margin-top: 500px;
+    }
+
+    .counter{
+      text-align: right;
+    }
+
+    .row {
+    height: 800px;
+    padding: 0px 10px 0px 10px; /*padding: top right bottom left; */
+    }
+
+    .timer{
+      text-align: center;
+    }
+
+    a:link, a:visited{
+      margin-left: 30px;
+      padding: 15px 25px 5px 15px;
+      text-decoration: none;
+      font-family: Verdana, Geneva, sans-serif;
+      color: black;
+    }
+
+    a:hover{
+      margin-left: 30px;
+      padding: 15px 25px 5px 15px;
+      text-decoration: underline;
+      font-family: Verdana, Geneva, sans-serif;
+      color: black;
+    }
+
+    a:active{
+      margin-left: 30px;
+      padding: 15px 25px 5px 15px;
+     text-decoration: underline; 
+     font-family: Verdana, Geneva, sans-serif;
+     color: black;
+    }
+    div#notifications {
+      position: absolute;
+      margin-left: 30px;
+      top: 20px;
+      left: 0px;
+      height: 700px;
+      width: 300px;
+      overflow: hidden;
+    }
+
+    div#notifications div.notification {
+      margin-bottom: 10px;
+      /*padding: 5px 0px 5px 0px; padding: top right bottom left; */
+      margin-left: 40px;
+      font-family: Verdana, Geneva, sans-serif;
+      font-size: 14px;
+      /*text-align: center;*/
+    }
+
+    div#notifyGradient {
+      position: absolute;
+      margin-left: 40px;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      background-color: white;
+      background: -webkit-linear-gradient(
+        rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%
+      );
+      background: linear-gradient(
+        rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%
+      );
+    }
+    p{
+      font-family: Verdana, Geneva, sans-serif;
+    }
+
+  </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src= "disable_button.js"></script>
+    <script src= "serve.js"></script>
+    <script src= "count.js"></script>
+    <script src= "timer.js"></script>
+</head>
+<body>
+ <div class="container pt-3"></div>  
+  <div class="row">
+    <!--Left-->
+    <div class="col"> <!-- style="background-color:#aaa;">-->
+      <div id= "notifications" classname= "notifications">
+        <div id= "notify"class= "notification"></div>
+        <!--<div id= "notify"class= "notification">this is a notification</div>
+        <div id= "notify"class= "notification">this is a notification</div>
+        <div id= "notify"class= "notification">this is a notification</div>
+        <div id= "notify"class= "notification">this is a notification</div>
+        <div id= "notify"class= "notification">this is a notification</div>
+        <div id= "notify"class= "notification">this is a notification</div>
+        <div id= "notify"class= "notification">this is a notification</div>
+        <div id= "notify"class= "notification">this is a notification</div>
+        <div id= "notify"class= "notification">this is a notification</div>
+        <div id= "notify"class= "notification">this is a notification</div>
+        <div id= "notify"class= "notification">this is a notification</div>
+        <div id= "notify"class= "notification">this is a notification</div>
+        <div id= "notify"class= "notification">this is a notification</div>
+        <div id= "notify"class= "notification">this is a notification</div>
+        <div id= "notify"class= "notification">this is a notification</div>-->
+        <div id= "notifyGradient"></div>
+      </div>
+    </div>
+    <!--Left-->
+
+    <!--Middle-->
+      <!--Column 1-->
+    <div class="col" style="padding: 15px 15px 5px 15px;">
+        <a href= "index.html">Bar</a>
+        <a href= "shop.html">Recipe Book</a><br><br>
+      <form action= "??????.php" method= "POST">
+        <button type="button" style="width: 150px;" id="btn_1" class="btn btn-dark" onclick= "disable(id); serve(); count();">Gin & Tonic</button><br><br>
+        <button type="button" style="width: 150px;" id="btn_2" class="btn btn-dark" onclick= "disable(id); serve(); count();"> Penicillin</button>
+      </form>
+    </div>
+      <!--Column 1-->
+      <!--Column 2-->
+    <div class="col" style="padding: 15px 15px 5px 15px;">
+      <div class="timer" style= "font-family: Verdana, Geneva, sans-serif;" id= "time">Timer</div><!--Timer-->
+        <div class= "bottom">
+        <form action= "cookie.php" method= "POST">  
+        <button type="button"id="start" onclick= "startTimer();" class="btn btn-outline-dark">Start</button>
+        </form>
+        </div><!--Start Button-->
+    </div>
+    <!--Column 2-->
+
+    <!--Column 3-->
+    <div class="col" style="padding: 15px 25px 5px 15px;">
+      <p style= "text-align: right;">Guests Served </p> 
+      <p style= "text-align: right;">Tips Earned</p>
+    </div>
+    <!--Column 3-->
+    <!--Middle-->
+
+    <!--Right-->
+    <div class="col" style="padding: 15px 25px 5px 15px;"><!-- background-color:#aaa;"> -->
+      <p id= 'guests'></p>
+      <p id= 'tips'></p>     
+    </div>
+    <!--Right-->
+      <script src= "count.js"></script>
+  </div> <!--container-->
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+
+    .bottom{
+      text-align: center;
+      margin-top: 500px;
+    }
+
+    .counter{
+      text-align: right;
+    }
+
+    .row {
+    height: 800px;
+    padding: 0px 10px 0px 10px; /*padding: top right bottom left; */
+    }
+
+    .timer{
+      text-align: center;
+    }
+
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted black;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+
+      /* Position the tooltip */
+      position: absolute;
+      z-index: 1;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+
+    a:link, a:visited{
+      margin-left: 30px;
+      padding: 15px 25px 5px 15px;
+      text-decoration: none;
+      font-family: Verdana, Geneva, sans-serif;
+      color: black;
+    }
+
+    a:hover{
+      margin-left: 30px;
+      padding: 15px 25px 5px 15px;
+      text-decoration: underline;
+      font-family: Verdana, Geneva, sans-serif;
+      color: black;
+    }
+
+    a:active{
+      margin-left: 30px;
+      padding: 15px 25px 5px 15px;
+     text-decoration: underline; 
+     font-family: Verdana, Geneva, sans-serif;
+     color: black;
+    }
+
+    div.items{
+      margin-left: 125px;
+    }
+    div#notifications {
+      position: absolute;
+      margin-left: 30px;
+      top: 20px;
+      left: 0px;
+      height: 700px;
+      width: 300px;
+      overflow: hidden;
+    }
+
+    div#notifications div.notification {
+      margin-bottom: 10px;
+      /*padding: 5px 0px 5px 0px; padding: top right bottom left; */
+      margin-left: 40px;
+      font-family: Verdana, Geneva, sans-serif;
+      font-size: 14px;
+    }
+
+    div#notifyGradient {
+      position: absolute;
+      margin-left: 40px;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      background-color: white;
+      background: -webkit-linear-gradient(
+      rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%
+      );
+      background: linear-gradient(
+      rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%
+      );
+    }
+    p{
+      font-family: Verdana, Geneva, sans-serif;
+    }
+
+  </style>
+</head>
+<body>
+ <div class="container pt-3"></div>  
+  <div class="row">
+    <!--Left-->
+    <div class="col"><!-- style="background-color:#aaa;">-->
+      <div id= "notifications" classname= "notifications">
+        <div id= "notify"class= "notification"></div>
+        <div id= "notifyGradient"></div>
+      </div>
+    </div>
+    <!--Left-->
+
+    <!--Middle-->
+    <!--Column 1-->
+    <div class="col" style="padding: 15px 15px 5px 15px;">
+        <a href= "index.html">Bar</a>
+        <a href= "index.html">Recipe Book</a><br><br>
+      <div class= "items">  
+      <form action= "show_recipe.php" method= "POST">
+          <button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $35" name="ol_fash" class="btn btn-dark" >Old Fashioned</button><br><br>
+          <button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $40" name="toronto" class="btn btn-dark" >Toronto</button><br><br>
+          <button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $25" name="marg" class="btn btn-dark" >Margarita</button><br><br>
+          <button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $35" name="ds" class="btn btn-dark" >Dark and Stormy</button><br><br>
+          <button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $25" name="ameri" class="btn btn-dark" >Americano</button><br><br>
+          <button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $35" name="negroni" class="btn btn-dark" >Negroni</button><br><br>
+          <button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $40" name="avi" class="btn btn-dark" >Aviation</button>
+      </form>
+    </div>
+    </div>
+    <!--Column 1-->
+    
+    <!--Column 2-->
+    <div class="col" style="padding: 15px 15px 5px 15px;">
+    </div>
+    <!--Column 2--> 
+
+    <!--Column 3-->
+    <div class="col" style="padding: 15px 25px 5px 15px;">
+      <p style= "text-align: right;">Guests Served </p> 
+      <p style= "text-align: right;">Tips Earned</p>
+    </div>
+    <!--Middle-->
+
+    <!--Right-->
+    <div class="col" style="padding: 15px 25px 5px 15px;"> <!-- background-color:#aaa;"> -->
+      <p id= 'guests'></p>
+      <p id= 'tips'></p>     
+    </div>
+    <!--Right-->
+      <script src= "count.js"></script>
+  </div> <!--container-->
+</body>
+</html>
